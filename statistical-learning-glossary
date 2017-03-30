@@ -1,1 +1,4 @@
 cluster analysis/clustering
+bias-variance trade-off
+E(y0 -f(x0))^2 = var(f(x0)) + [bias(f(x0))]^2 + var(e)
+test MSE         variance     squared bias      irreducible error
