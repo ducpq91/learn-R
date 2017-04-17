@@ -3,3 +3,7 @@ Import from:
   #Database (SQL)
   #Web (HTTP)
   #
+
+To download a file:
+  #download.file(url,destfile,...)
+  #url -- string; destfile  -- string
