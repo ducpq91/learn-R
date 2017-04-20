@@ -7,3 +7,4 @@ Import from:
 To download a file:
   #download.file(url,destfile,...)
   #url -- string; destfile  -- string
+  #the file is stored on the working directory
