@@ -1,10 +1,11 @@
 Import from:
-  #Flat files (csv, tsv, excel)
-  #Database (SQL)
-  #Web (HTTP)
-  #
+  #Flat files (csv, tsv, excel) -- utils, readr, fread, readxl
+  #Database (SQL) -- DBI: dbConnect, dbGetQuery
+  #Web (HTTP) -- utils: read.csv, read.delim; readr; gdata; readxl; jsonlite: fromJSON, toJSON
+  #Statistical package: SAS, STATA, SPSS
 
 To download a file:
   #download.file(url,destfile,...)
   #url -- string; destfile  -- string
   #the file is stored on the working directory
+
