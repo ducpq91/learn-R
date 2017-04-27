@@ -5,3 +5,11 @@ Eg: data.frame(year = c(1,2,3), ncols = c(102,102,203), nrows = c(2,3,4)) #tag =
     1     102   2
     2     102   3
     3     203   4
+
+sum() is different from using "+" operation:
+li <- c(1,2,3,4)
+fb <- c(5,6,7,8)
+sum(li,fb)
+> 36 # is actually sum(1,2,3,4,5,6,7,8)
+li + fb
+> 6,8,10,12 # is element-wise sum
