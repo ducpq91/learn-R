@@ -1,6 +1,6 @@
 data.frame()
 Coerce to a data frame.
-Eg: data.frame(year = c(1,2,3), ncols = c(102,102,203), nrows = c(2,3,4)) #tag = value where 'tag' becomes column names
+Eg: data.frame(year = c(1,2,3), ncols = c(102,102,203), nrows = c(2,3,4)) #key = value where 'key' becomes column names
 >>> year  ncols nrows
     1     102   2
     2     102   3
