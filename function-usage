@@ -15,3 +15,8 @@ li + fb
 > 6,8,10,12 # is element-wise sum
 
 min() and max() can be used to find out characters that occur first/last in a string, by alphabetical order
+
+#regex
+"\\1" used in the replacement argument of sub() is a back-referencep; it refers to a pattern inside the parenthesis
+sub(".*\\s([0-9]+)\\snomination.*$", "\\1",vec)
+^the \\1 indicate that [0-9]+ will replace the pattern
