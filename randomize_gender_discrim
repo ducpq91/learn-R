@@ -1,0 +1,16 @@
+# From datacamp's Foundation of Inference course
+# Create a data frame of differences in promotion rates
+disc_perm <- disc %>%
+  rep_sample_n(size = nrow(disc), reps = 1000) %>% # the `replace` argument is set to FALSE by default
+  mutate(prom_perm = sample(promote)) %>% # dplyr::mutate() creates a new column in the current df
+  group_by(replicate, sex) %>% # group__by() # dplyr::group_by() takes an existing tbl and converts it into a grouped tbl where operations are performed "by group". 
+  summarize(prop_prom_perm = mean(prom_perm == "promoted"), # narray::summarize() summarizes a matrix analogous to a grouped df in dplyr 
+            prop_prom = mean(promote == "promoted")) %>%
+  summarize(diff_perm = diff(prop_prom_perm),
+            diff_orig = diff(prop_prom))  # male - female
+
+
+# Histogram of permuted differences
+ggplot(disc_perm, aes(x = diff_perm)) + 
+  geom_histogram(binwidth = .01) +
+  geom_vline(aes(xintercept = diff_orig), col = "red")
