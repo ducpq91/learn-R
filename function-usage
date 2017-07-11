@@ -20,3 +20,14 @@ min() and max() can be used to find out characters that occur first/last in a st
 "\\1" used in the replacement argument of sub() is a back-referencep; it refers to a pattern inside the parenthesis
 sub(".*\\s([0-9]+)\\snomination.*$", "\\1",vec)
 ^the \\1 indicate that [0-9]+ will replace the pattern
+
+
+#lookup table (key-value library)
+two <- c("AA", "AS")
+lut <- c("AA" = "American", 
+         "AS" = "Alaska", 
+         "B6" = "JetBlue")
+two <- lut[two]
+two
+> AA            AS
+> "American"    "Alaska"
