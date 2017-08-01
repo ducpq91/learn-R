@@ -1,0 +1,2 @@
+matplot(x,y,...)
+  - y can be a subset in the form of df[,<column_index>/<column_names>]
