@@ -1,11 +1,22 @@
-Import from:
+#Import from:
   #Flat files (csv, tsv, excel) -- utils, readr, fread, readxl
   #Database (SQL) -- DBI: dbConnect, dbGetQuery
   #Web (HTTP) -- utils: read.csv, read.delim; readr; gdata; readxl; jsonlite: fromJSON, toJSON
   #Statistical package: SAS, STATA, SPSS
 
-To download a file:
+#To download a file:
   #download.file(url,destfile,...)
   #url -- string; destfile  -- string
   #the file is stored on the working directory
 
+#To copy pasta data from table to R console:
+recess <- read.table(textConnection(
+  "begin, end
+  1969-12-01, 1970-11-01
+  1973-11-01, 1975-03-01
+  1980-01-01, 1980-07-01
+  1981-07-01, 1982-11-01
+  1990-07-01, 1991-03-01
+  2001-03-01, 2001-11-01
+  2007-12-01, 2009-06-01"), sep=',',
+colClasses=c('Date', 'Date'), header=TRUE)
