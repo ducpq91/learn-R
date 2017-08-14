@@ -1,2 +1,8 @@
 matplot(x,y,...)
   - y can be a subset in the form of df[,<column_index>/<column_names>]
+
+
+#ggplot2
+  jitter can be used 1) as an argument geom_point(position = "jitter"),
+                  or 2) as a geom geom_jitter(),
+                  or 3) as a position function geom_point(position = position_jitter(0.1))
