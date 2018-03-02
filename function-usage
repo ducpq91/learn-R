@@ -1,12 +1,13 @@
-data.frame()
-Coerce to a data frame.
+#data.frame()
+Coerce to a data frame. WARNING: as.data.frame() will convert a matrix into 1(row) x row*col(col) dataframe; use dplyr::as_data_frame()
+instead to retain dimensions.
 Eg: data.frame(year = c(1,2,3), ncols = c(102,102,203), nrows = c(2,3,4)) #key = value where 'key' becomes column names
 >>> year  ncols nrows
     1     102   2
     2     102   3
     3     203   4
 
-sum() is different from using "+" operation:
+#sum() is different from using "+" operation:
 li <- c(1,2,3,4)
 fb <- c(5,6,7,8)
 sum(li,fb)
@@ -20,3 +21,12 @@ min() and max() can be used to find out characters that occur first/last in a st
 "\\1" used in the replacement argument of sub() is a back-referencep; it refers to a pattern inside the parenthesis
 sub(".*\\s([0-9]+)\\snomination.*$", "\\1",vec)
 ^the \\1 indicate that [0-9]+ will replace the pattern
+
+
+#purrr package
+##write many filtered versions of a dataframe to multiple files
+
+list <- map2(list(df), unique(df$var), ~ filter(.x, .x$var == .y))
+names(list) <- unique(df$var)
+li_name <- as.list(paste0("part1", names(list), ".csv"))
+map2(list, li_name, write.csv)
